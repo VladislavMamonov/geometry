@@ -1,28 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "functions.h"
 
 #define n 30
 
 
 int main()
 {
-	FILE *data;
-	char arr[n];
+	coordinates1 f1;
+	coordinates2 f2;
+	coordinates3 f3;
 
-	
-	data = fopen("data.txt", "r");  /*Считываем входные данные*/
-
-	
-	if (data == NULL) {
-		printf("невозможно открыть файл\n");
-		return system("cls");
-	}
-
-	
-	while (fgets (arr, n, data) != NULL)
-		printf("%s", arr);
-	printf("\n");
-
-
-	fclose(data);
+	input(&f1, &f2, &f3);
 }
