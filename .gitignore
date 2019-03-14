@@ -1,3 +1,5 @@
 *.o
 *.a
 main
+functions
+*.txt
