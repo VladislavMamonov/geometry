@@ -1,12 +1,14 @@
-all: main.o functions.o
-	gcc main.c functions -o main 
-main.o: main.c
-	gcc -c main.c -o main
-functions.o: functions.c
-	gcc -c functions.c -o functions
+all: geometry
+
+
+geometry: main.o functions.o
+	gcc -Wall -Werror build/main.o build/functions.o -o bin/geometry 
+main.o: src/main.c
+	gcc -Wall -Werror -c src/main.c -o build/main.o
+functions.o: src/functions.c
+	gcc -Wall -Werror -c src/functions.c -o build/functions.o
 
 
 
 clean:
-	rm -f ./*.o
-	rm -f ./main
+	rm -rf build/*.o bin/geometry
