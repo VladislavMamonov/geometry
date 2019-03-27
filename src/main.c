@@ -6,9 +6,9 @@
 
 int main()
 {
-    coordinates1 f1;
-    coordinates2 f2;
-    coordinates3 f3;
+    circle1 f1;
+    circle2 f2;
+    circle3 f3;
 
     input(&f1, &f2, &f3);
 }

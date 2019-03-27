@@ -6,17 +6,12 @@
 
 #define n 30
 
-void input(circle* f1, circle2* f2, circle3* f3)
+void input(circle1* f1, circle2* f2, circle3* f3)
 {
     char figure1[n], figure2[n], figure3[n];
     char CorrectData1[n] = "circle";
     char CorrectData2[n] = "Circle";
     char CorrectData3[n] = "CIRCLE";
-
-    FILE *data;
-
-    data = fopen("data.txt", "w");
-
 
     printf("Input three figures: ");
     scanf("%s %s %s", figure1, figure2, figure3);
@@ -42,16 +37,7 @@ void input(circle* f1, circle2* f2, circle3* f3)
 
     printf("Input the coordinates of the third figure: ");
     scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
-
-
-    fprintf(data, "%s(%.1lf %.1lf, %.1lf)\n", figure1, f1->x, f1->y, f1->radius);   //Записываем полученные данные в файл
-    fprintf(data, "%s(%.1lf %.1lf, %.1lf)\n", figure2, f2->x, f2->y, f2->radius);
-    fprintf(data, "%s(%.1lf %.1lf, %.1lf)\n", figure3, f3->x, f3->y, f3->radius);
-
-    if (data == NULL) {
-        printf("data read error\n");
-        _Exit(0);
-    }
+    
 
     fclose(data);
 }

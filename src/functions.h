@@ -3,13 +3,13 @@
 
 typedef struct {
     double x, y, radius;
-} coordinates1;
+} circle1;
 
-typedef coordinates1 coordinates2;
-typedef coordinates1 coordinates3;
+typedef circle1 circle2;
+typedef circle1 circle3;
 
 
 
-int input(coordinates1* f1, coordinates2* f2, coordinates3* f3);
+void input(circle1* f1, circle2* f2, circle3* f3);
 
 #endif
