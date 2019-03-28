@@ -1,7 +1,7 @@
-#include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "functions.h"
 
 #define n 30
 
@@ -12,8 +12,12 @@ void input(circle1* f1, circle2* f2, circle3* f3)
     char CorrectData2[n] = "Circle";
     char CorrectData3[n] = "CIRCLE";
 
+    
     printf("Input three figures: ");
     scanf("%s %s %s", figure1, figure2, figure3);
+
+    
+
 
     if ((strcmp(figure1, CorrectData1) != 0
          && strcmp(figure1, CorrectData2) != 0
@@ -32,9 +36,12 @@ void input(circle1* f1, circle2* f2, circle3* f3)
     scanf("%lf %lf %lf", &f1->x, &f1->y, &f1->radius);
 
     printf("Input the coordinates of the second figure: ");
+    
     scanf("%lf %lf %lf", &f2->x, &f2->y, &f2->radius);
 
     printf("Input the coordinates of the third figure: ");
+    
+
     scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
 }
 

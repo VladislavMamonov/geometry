@@ -1,6 +1,6 @@
-#include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "functions.h"
 
 #define n 30
 
