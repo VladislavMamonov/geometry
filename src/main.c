@@ -10,16 +10,9 @@ int main()
     circle2 f2;
     circle3 f3;
 
-    
     input(&f1, &f2, &f3);
-	area_calculation(&f1, &f2, &f3);
-	perimeter_calculation(&f1, &f2, &f3);
+    area_calculation(&f1, &f2, &f3);
+    perimeter_calculation(&f1, &f2, &f3);
 
-
-
-
-
-
-
-	return 0;
+    return 0;
 }

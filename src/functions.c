@@ -12,7 +12,6 @@ void input(circle1* f1, circle2* f2, circle3* f3)
     char CorrectData2[n] = "Circle";
     char CorrectData3[n] = "CIRCLE";
 
-    
     printf("Input three figures: ");
     scanf("%s %s %s", figure1, figure2, figure3);
 
@@ -26,7 +25,7 @@ void input(circle1* f1, circle2* f2, circle3* f3)
             && strcmp(figure3, CorrectData2) != 0
             && strcmp(figure3, CorrectData3) != 0)) {
         printf("Unknown figure\n");
-        _Exit (0);
+        _Exit(0);
     }
 
     printf("Input the coordinates of the first figure: ");
@@ -37,22 +36,18 @@ void input(circle1* f1, circle2* f2, circle3* f3)
 
     printf("Input the coordinates of the third figure: ");
     scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
-
-
 }
-
 
 void area_calculation(circle1* f1, circle2* f2, circle3* f3)
 {
-   f1->area = 3.14 * (f1->radius) * (f1->radius);     
-   f2->area = 3.14 * (f2->radius) * (f2->radius);     
-   f3->area = 3.14 * (f3->radius) * (f3->radius);     
+    f1->area = 3.14 * (f1->radius) * (f1->radius);
+    f2->area = 3.14 * (f2->radius) * (f2->radius);
+    f3->area = 3.14 * (f3->radius) * (f3->radius);
 }
-
 
 void perimeter_calculation(circle1* f1, circle2* f2, circle3* f3)
 {
-    f1->perimeter =  2 * 3.14 * (f1->radius);
-    f2->perimeter =  2 * 3.14 * (f2->radius);
-    f3->perimeter =  2 * 3.14 * (f3->radius);
+    f1->perimeter = 2 * 3.14 * (f1->radius);
+    f2->perimeter = 2 * 3.14 * (f2->radius);
+    f3->perimeter = 2 * 3.14 * (f3->radius);
 }
