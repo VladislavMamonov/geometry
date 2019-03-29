@@ -10,6 +10,6 @@ build/functions.o: src/functions.c
 	gcc -Wall -Werror -c src/functions.c -o build/functions.o
 
 
-
+.PHONY: clean
 clean:
 	rm -rf build/*.o bin/geometry
