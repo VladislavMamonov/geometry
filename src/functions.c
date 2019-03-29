@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #define n 30
 
-void input(circle1* f1, circle2* f2, circle3* f3)
+void input(circle *f1, circle *f2, circle *f3)
 {
     char figure1[n], figure2[n], figure3[n];
     char CorrectData1[n] = "circle";
@@ -38,16 +39,16 @@ void input(circle1* f1, circle2* f2, circle3* f3)
     scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
 }
 
-void area_calculation(circle1* f1, circle2* f2, circle3* f3)
+void area_calculation(circle *f1, circle *f2, circle*f3)
 {
-    f1->area = 3.14 * (f1->radius) * (f1->radius);
-    f2->area = 3.14 * (f2->radius) * (f2->radius);
-    f3->area = 3.14 * (f3->radius) * (f3->radius);
+    f1->area = M_PI * (f1->radius) * (f1->radius);
+    f2->area = M_PI * (f2->radius) * (f2->radius);
+    f3->area = M_PI * (f3->radius) * (f3->radius);
 }
 
-void perimeter_calculation(circle1* f1, circle2* f2, circle3* f3)
+void perimeter_calculation(circle *f1, circle *f2, circle *f3)
 {
-    f1->perimeter = 2 * 3.14 * (f1->radius);
-    f2->perimeter = 2 * 3.14 * (f2->radius);
-    f3->perimeter = 2 * 3.14 * (f3->radius);
+    f1->perimeter = 2 * M_PI * (f1->radius);
+    f2->perimeter = 2 * M_PI * (f2->radius);
+    f3->perimeter = 2 * M_PI * (f3->radius);
 }
