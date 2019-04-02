@@ -1,7 +1,7 @@
 all: bin/geometry
 
 bin/geometry: build/main.o build/functions.o
-	gcc -Wall -Werror build/main.o build/functions.o -o bin/geometry 
+	gcc -Wall -Werror build/main.o build/functions.o -o bin/geometry -lm 
 
 build/main.o: src/main.c
 	gcc -Wall -Werror -c src/main.c -o build/main.o
