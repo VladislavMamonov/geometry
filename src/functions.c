@@ -55,20 +55,21 @@ void perimeter_calculation(circle* f1, circle* f2, circle* f3)
 
 int intersection_definition(circle* f1, circle* f2)
 {
-    double d;   /*расстояние между центрами окружностей*/
-    double a;   /*расстояние от радиуса первой фигуры до точки пересечения всех линий*/
+    double d; /*расстояние между центрами окружностей*/
+    double a; /*расстояние от радиуса первой фигуры до точки пересечения всех
+                 линий*/
 
     if (f1->x == f2->x && f1->y == f2->y)
-        return 0;   /*Окружности не пересекаются*/
-    
+        return 0; /*Окружности не пересекаются*/
+
     d = sqrt(pow(abs(f1->x - f2->x), 2) + pow(abs(f1->y - f2->y), 2));
     if (d > f1->radius + f2->radius)
         return 0;
 
     a = (f1->radius * f1->radius - f2->radius * f2->radius + d * d) / (d * 2);
 
-    if (a == f1->radius)  /*окружности соприкасаются*/
+    if (a == f1->radius) /*окружности соприкасаются*/
         return 0;
     else
-        return 1;   /*окружности пересекаются*/
+        return 1; /*окружности пересекаются*/
 }
