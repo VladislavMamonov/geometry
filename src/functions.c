@@ -73,3 +73,60 @@ int intersection_definition(circle* f1, circle* f2)
     else
         return 1; /*окружности пересекаются*/
 }
+
+void output(circle* f1, circle* f2, circle* f3)
+{
+    FILE* data = fopen("data.txt", "w");
+
+    fprintf(data, "1. circle(%.1lf %.1lf, %.1lf)\n", f1->x, f1->y, f1->radius);
+    fprintf(data, "\t perimeter = %lf\n", f1->perimeter);
+    fprintf(data, "\t area = %lf\n", f1->area);
+    fprintf(data, "\t intersects:\n");
+
+    if (intersection_definition(f1, f2) > 0)
+        fprintf(data, "2. circle\n");
+
+    if (intersection_definition(f1, f3) > 0)
+        fprintf(data, "3. circle\n");
+
+    if (f1->intersects == 0)
+        fprintf(data, "none\n");
+
+    fprintf(data,
+            "\n2. circle(%.1lf %.1lf, %.1lf)\n",
+            f2->x,
+            f2->y,
+            f2->radius);
+    fprintf(data, "\t perimeter = %lf\n", f2->perimeter);
+    fprintf(data, "\t area = %lf\n", f2->area);
+    fprintf(data, "\t intersects:\n");
+
+    if (intersection_definition(f2, f1) > 0)
+        fprintf(data, "1. circle\n");
+
+    if (intersection_definition(f2, f3) > 0)
+        fprintf(data, "3. circle\n");
+
+    if (f2->intersects == 0)
+        fprintf(data, "none\n");
+
+    fprintf(data,
+            "\n3. circle(%.1lf %.1lf, %.1lf)\n",
+            f3->x,
+            f3->y,
+            f3->radius);
+    fprintf(data, "\t perimeter = %lf\n", f3->perimeter);
+    fprintf(data, "\t area = %lf\n", f3->area);
+    fprintf(data, "\t intersects:\n");
+
+    if (intersection_definition(f3, f1) > 0)
+        fprintf(data, "1. circle\n");
+
+    if (intersection_definition(f3, f2) > 0)
+        fprintf(data, "2. circle\n");
+
+    if (f3->intersects == 0)
+        fprintf(data, "none\n");
+
+    fclose(data);
+}

@@ -36,5 +36,7 @@ int main()
         f3.intersects++;
     }
 
+    output(&f1, &f2, &f3);
+
     return 0;
 }
