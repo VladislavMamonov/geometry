@@ -6,12 +6,12 @@
 
 int main()
 {
-	circle *memory = malloc(sizeof *memory);
+    circle* memory = malloc(sizeof *memory);
 
     circle f1, f2, f3;
 
     if (memory == NULL)
-		printf("memory allocation error\n");
+        printf("memory allocation error\n");
 
     input(&f1, &f2, &f3);
     area_calculation(&f1, &f2, &f3);

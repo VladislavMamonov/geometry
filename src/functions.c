@@ -43,7 +43,7 @@ void input(circle* f1, circle* f2, circle* f3)
         printf("Input the coordinates of the first figure: ");
         scanf("%lf %lf %lf", &f1->x, &f1->y, &f1->radius);
     }
-    
+
     if (f2->radius == 0) {
         printf("radius cannot be zero(2)\n");
         printf("Input the coordinates of the second figure: ");
@@ -107,7 +107,8 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f1, f3) > 0)
         fprintf(data, "3. circle\n");
 
-    if (intersection_definition(f1, f2) == 0 && intersection_definition(f1, f3) == 0)
+    if (intersection_definition(f1, f2) == 0
+        && intersection_definition(f1, f3) == 0)
         fprintf(data, "none\n");
 
     fprintf(data,
@@ -125,7 +126,8 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f2, f3) > 0)
         fprintf(data, "3. circle\n");
 
-    if (intersection_definition(f2, f1) == 0 && intersection_definition(f2, f3) == 0)
+    if (intersection_definition(f2, f1) == 0
+        && intersection_definition(f2, f3) == 0)
         fprintf(data, "none\n");
 
     fprintf(data,
@@ -143,7 +145,8 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f3, f2) > 0)
         fprintf(data, "2. circle\n");
 
-    if (intersection_definition(f3, f1) == 0 && intersection_definition(f3, f2) == 0)
+    if (intersection_definition(f3, f1) == 0
+        && intersection_definition(f3, f2) == 0)
         fprintf(data, "none\n");
 
     fclose(data);
