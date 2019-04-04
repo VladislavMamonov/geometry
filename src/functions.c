@@ -37,6 +37,24 @@ void input(circle* f1, circle* f2, circle* f3)
 
     printf("Input the coordinates of the third figure: ");
     scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
+
+    if (f1->radius == 0) {
+        printf("radius cannot be zero(1)\n");
+        printf("Input the coordinates of the first figure: ");
+        scanf("%lf %lf %lf", &f1->x, &f1->y, &f1->radius);
+    }
+
+    if (f2->radius == 0) {
+        printf("radius cannot be zero(2)\n");
+        printf("Input the coordinates of the second figure: ");
+        scanf("%lf %lf %lf", &f2->x, &f2->y, &f2->radius);
+    }
+
+    if (f3->radius == 0) {
+        printf("radius cannot be zero(3)\n");
+        printf("Input the coordinates of the third figure: ");
+        scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
+    }
 }
 
 void area_calculation(circle* f1, circle* f2, circle* f3)
@@ -89,7 +107,8 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f1, f3) > 0)
         fprintf(data, "3. circle\n");
 
-    if (f1->intersects == 0)
+    if (intersection_definition(f1, f2) == 0
+        && intersection_definition(f1, f3) == 0)
         fprintf(data, "none\n");
 
     fprintf(data,
@@ -107,7 +126,8 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f2, f3) > 0)
         fprintf(data, "3. circle\n");
 
-    if (f2->intersects == 0)
+    if (intersection_definition(f2, f1) == 0
+        && intersection_definition(f2, f3) == 0)
         fprintf(data, "none\n");
 
     fprintf(data,
@@ -125,7 +145,8 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f3, f2) > 0)
         fprintf(data, "2. circle\n");
 
-    if (f3->intersects == 0)
+    if (intersection_definition(f3, f1) == 0
+        && intersection_definition(f3, f2) == 0)
         fprintf(data, "none\n");
 
     fclose(data);

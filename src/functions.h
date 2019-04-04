@@ -2,7 +2,7 @@
 #define FUNCTIONS_H
 
 typedef struct {
-    double x, y, radius, perimeter, area, intersects;
+    double x, y, radius, perimeter, area;
 } circle;
 
 void input(circle* f1, circle* f2, circle* f3);
