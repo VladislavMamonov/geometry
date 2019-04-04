@@ -89,7 +89,7 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f1, f3) > 0)
         fprintf(data, "3. circle\n");
 
-    if (f1->intersects == 0)
+    if (intersection_definition(f1, f2) == 0 && intersection_definition(f1, f3) == 0)
         fprintf(data, "none\n");
 
     fprintf(data,
@@ -107,7 +107,7 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f2, f3) > 0)
         fprintf(data, "3. circle\n");
 
-    if (f2->intersects == 0)
+    if (intersection_definition(f2, f1) == 0 && intersection_definition(f2, f3) == 0)
         fprintf(data, "none\n");
 
     fprintf(data,
@@ -125,7 +125,7 @@ void output(circle* f1, circle* f2, circle* f3)
     if (intersection_definition(f3, f2) > 0)
         fprintf(data, "2. circle\n");
 
-    if (f3->intersects == 0)
+    if (intersection_definition(f3, f1) == 0 && intersection_definition(f3, f2) == 0)
         fprintf(data, "none\n");
 
     fclose(data);
