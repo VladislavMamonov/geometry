@@ -57,12 +57,12 @@ void input(circle* f1, circle* f2, circle* f3)
     }
 }
 
-int area_calculation(circle* f)
+double area_calculation(circle* f)
 {
     return f->area = M_PI * (f->radius) * (f->radius);
 }
 
-int perimeter_calculation(circle* f)
+double perimeter_calculation(circle* f)
 {
     return f->perimeter = 2 * M_PI * (f->radius);
 }
