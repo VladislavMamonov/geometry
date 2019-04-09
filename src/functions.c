@@ -57,18 +57,14 @@ void input(circle* f1, circle* f2, circle* f3)
     }
 }
 
-void area_calculation(circle* f1, circle* f2, circle* f3)
+int area_calculation(circle* f)
 {
-    f1->area = M_PI * (f1->radius) * (f1->radius);
-    f2->area = M_PI * (f2->radius) * (f2->radius);
-    f3->area = M_PI * (f3->radius) * (f3->radius);
+    return f->area = M_PI * (f->radius) * (f->radius);
 }
 
-void perimeter_calculation(circle* f1, circle* f2, circle* f3)
+int perimeter_calculation(circle* f)
 {
-    f1->perimeter = 2 * M_PI * (f1->radius);
-    f2->perimeter = 2 * M_PI * (f2->radius);
-    f3->perimeter = 2 * M_PI * (f3->radius);
+    return f->perimeter = 2 * M_PI * (f->radius);
 }
 
 int intersection_definition(circle* f1, circle* f2)
