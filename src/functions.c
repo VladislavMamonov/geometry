@@ -55,6 +55,24 @@ void input(circle* f1, circle* f2, circle* f3)
         printf("Input the coordinates of the third figure: ");
         scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
     }
+
+    if (f1->radius < 0) {
+        printf("radius cannot be negative(1)\n");
+        printf("Input the coordinates of the first figure: ");
+        scanf("%lf %lf %lf", &f1->x, &f1->y, &f1->radius);
+    }
+
+    if (f2->radius < 0) {
+        printf("radius cannot be negative(2)\n");
+        printf("Input the coordinates of the second figure: ");
+        scanf("%lf %lf %lf", &f2->x, &f2->y, &f2->radius);
+    }
+
+    if (f3->radius < 0) {
+        printf("radius cannot be negative(3)\n");
+        printf("Input the coordinates of the third figure: ");
+        scanf("%lf %lf %lf", &f3->x, &f3->y, &f3->radius);
+    }
 }
 
 double area_calculation(circle* f)
